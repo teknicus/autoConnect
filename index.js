@@ -1,13 +1,52 @@
-const express = require('express')
-const app = express()
-const port = 3030
+config = {
+    "db": "mongodb://localhost:27017",
+    "endpoint_root": "server",
+    "server": {
+        "port": 3000,
+        "address": "0.0.0.0"
+    },
+    "accessControl": {
+        "allowOrigin": "*",
+        "allowMethods": "GET,POST,PUT,DELETE,HEAD,OPTIONS",
+        "allowCredentials": false
+    },
+    "dbAccessControl": {
+        "foo_database": ["collection1", "collection2"],
+        "bar_database": ["collection2", "collection3"],
+        "zoo_database": [],
+    },
+    "mongoOptions": {
+        "serverOptions": {
+        },
+        "dbOptions": {
+            "w": 1
+        }
+    },
+    "humanReadableOutput": true,
+    "urlPrefix": "",
+    "schema": {
+        "foo_database": {
+            "collection1": {
+                "definitions": {},
+                "$schema": "http://json-schema.org/draft-06/schema#",
+                "$id": "http://json-schema.org/draft-06/schema#",
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "$id": "/properties/value",
+                        "type": "boolean",
+                        "title": "Foo boolean value",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": false,
+                        "examples": [
+                            false
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}	
 
-app.get('/', (req, res) => res.send('Hello World!'));
-app.get('/register',(req, res) => regUser(req, res));
-
-function regUser(req, res){
-    console.log(req);
-    res.send('Received Data.');
-}
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+var mongodbRest = require('mongodb-rest/server.js');
+mongodbRest.startServer(config);
