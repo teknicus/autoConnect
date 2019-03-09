@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/teknicus/autoConnect/issues"
   },
-  "homepage": "https://github.com/teknicus/autoConnect#readme"
+  "homepage": "https://github.com/teknicus/autoConnect#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
