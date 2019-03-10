@@ -60,14 +60,14 @@ router.route('/')
                         for(i=0;i<result.length;i++){ //console.log('loop1');
                             console.log("loop 2");
                             if((result[i].atime > timeNum) && (result[i].atime <= (timeNum + 200))){
-
+                                console.log("in if...")
                                 count= count + parseInt(result[1].N_trip);
-                                console.log(result);
-                                res.send({
-                                    G_id: result[i].G_id,
-                                    N_trip: result[i].N_trip,
-                                    fdes: result[i].fdes
-                                });
+                                // result);
+
+                                console.log(result[i].G_id);
+                                console.log(result[i].N_trip);
+                                console.log(result[i].fdes);
+
 
 
 

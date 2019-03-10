@@ -9,6 +9,6 @@ var passengerSchema = new mongoose.Schema({
     vehnum: String,
     fdes: String,
     atime: Number,
-    G_id: String
+    g_id: String
 });
 mongoose.model('passenger', passengerSchema);
