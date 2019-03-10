@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36e45b36-c45d-45a8-bfc9-1e6e6380f257" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/quote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/driver.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/driver.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/hotspot.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/hotspot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/passenger.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/passenger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/quote.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/quote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/query.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/quote.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/quote.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/quote.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="654">
+              <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -61,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/model/quote.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <caret line="7" column="24" selection-start-line="2" selection-start-column="4" selection-end-line="7" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -207,12 +201,12 @@
       <updated>1552111763652</updated>
       <workItem from="1552111766611" duration="769000" />
       <workItem from="1552125818442" duration="418000" />
-      <workItem from="1552135438464" duration="24685000" />
+      <workItem from="1552135438464" duration="26550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25872000" />
+    <option name="totallyTimeSpent" value="27737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-322" width="1936" height="1096" extended-state="6" />
@@ -341,14 +335,14 @@
     <entry file="file://$PROJECT_DIR$/model/quote.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <caret line="7" column="24" selection-start-line="2" selection-start-column="4" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/quote.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="654">
+          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
         </state>
       </provider>
     </entry>

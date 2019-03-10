@@ -31,16 +31,54 @@ router.route('/')
 
         var fare = req.body.fare;
         var id = req.body.D_id;
+        var G_id = req.body.G_id;
 
-        var fareNum = parseFloat(fare);
+        var fareNum = parseInt(fare);
 
         MongoClient.connect(url, function(err, db) {
             //if (err) throw err;
             var dbo = db.db("autoConnect");
             var myquery = { L_quote_fare: { $min: $L_quote_fare } };
 
-            dbo.collection(quote).find(myquery, { projection: {  _id:0, L_quote_fare: 1 } }).toArray(function(err, result) {
+            dbo.collection(quotation).find(myquery, { projection: {  _id:0, L_quote_fare: 1, L_quote_D_id: 1 } }).toArray(function(err, result) {
                 console.log(result);
+                var L_fareNum = parseInt(result.L_quote_fare);
+
+                if(fareNum < L_fareNum){
+                    var myobj = {
+                        "G_id": G_id,
+                        "N_trips": N_trips,
+                        "quote_D_id": req.body.D_id,
+                        "quote_fare": fareNum,
+                        "L_quote_D_id": req.body.D_id,
+                        "L_quote_fare": fareNum
+                    };
+
+                    dbo.collection("quotation").insertOne(myobj, function(err, res) {
+                        if (err) throw err;
+                        console.log("1 document inserted");
+                        db.close();
+                    });
+                }
+
+                else {
+                    var myobj = {
+                        "G_id": G_id,
+                        "N_trips": N_trips,
+                        "quote_D_id": req.body.D_id,
+                        "quote_fare": fareNum,
+                        "L_quote_D_id": result.L_quote_D_id,
+                        "L_quote_fare": L_fareNum
+                    };
+
+                    dbo.collection("quotation").insertOne(myobj, function(err, res) {
+                        if (err) throw err;
+                        console.log("1 document inserted");
+                        db.close();
+                    });
+                }
+
+            }
 
 
         });
