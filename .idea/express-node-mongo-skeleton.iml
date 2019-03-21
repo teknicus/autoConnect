@@ -3,6 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/AutoConnect_Main/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/AutoConnect_Main/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/rest_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/rest_flutter/build" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
